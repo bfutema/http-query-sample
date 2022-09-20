@@ -1,0 +1,16 @@
+module.exports = {
+  name: 'default',
+  type: process.env.MYSQL_DB_CONN,
+  host: process.env.MYSQL_DB_HOST,
+  port: process.env.MYSQL_DB_PORT,
+  username: process.env.MYSQL_DB_USER,
+  password: process.env.MYSQL_DB_PASS,
+  database: process.env.MYSQL_DB_DATABASE,
+  entities: [`./src/modules/**/app/typeorm/entities/*.ts`],
+  migrations: [`./src/shared/infra/typeorm/migrations/*.ts`],
+  seeds: [`./src/shared/infra/typeorm/seeds/*.ts`],
+  factories: [`./src/shared/infra/typeorm/factories/*.ts`],
+  cli: { migrationsDir: `./src/shared/infra/typeorm/migrations` },
+  options: { enableArithAbort: true },
+  autoLoadEntities: true,
+};
