@@ -7,6 +7,7 @@ Features:
 - Search
 - Pagination
 - Sorting
+- Limit by page
 - Get filter from url
 
 ## how to run
