@@ -9,6 +9,13 @@ Features:
 - Sorting
 - Limit by page
 - Get filter from url
+- Relations with TypeORM pattern (array)
+
+## Comming soon
+
+Features:
+
+- Relations to prisma pattern (objects with includes)
 
 ## How to run
 
