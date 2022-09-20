@@ -10,7 +10,7 @@ Features:
 - Limit by page
 - Get filter from url
 
-## how to run
+## How to run
 
 In backend run commands below:
 
