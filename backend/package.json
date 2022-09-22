@@ -9,6 +9,7 @@
     "seed": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm-seeding/dist/cli.js seed"
   },
   "dependencies": {
+    "@stackfy/http-query": "^1.0.3",
     "class-transformer": "^0.5.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",

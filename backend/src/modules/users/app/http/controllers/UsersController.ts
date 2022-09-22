@@ -2,12 +2,13 @@ import { instanceToInstance } from 'class-transformer';
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 
+import { HttpQuery } from '@stackfy/http-query';
+
 import { CreateUserService } from '../../../services/CreateUserService';
 import { DeleteUserService } from '../../../services/DeleteUserService';
 import { ListUsersService } from '../../../services/ListUsersService';
 import { ShowUserService } from '../../../services/ShowUserService';
 import { UpdateUserService } from '../../../services/UpdateUserService';
-import { HttpQuery } from '../../../../../shared/helpers/HttpQueryHelper';
 
 class UsersController {
   public async index(request: Request, response: Response): Promise<Response> {

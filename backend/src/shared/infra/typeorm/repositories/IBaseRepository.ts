@@ -1,6 +1,6 @@
 import { DeepPartial } from 'typeorm';
 
-import { IQuery } from '../../../helpers/HttpQueryHelper';
+import { IQuery } from '@stackfy/http-query';
 
 export type IFind = { query?: IQuery; relations?: string[] };
 export type IFindById = { id: number; relations?: string[] };

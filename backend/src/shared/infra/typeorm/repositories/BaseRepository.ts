@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { DeepPartial, Repository, SelectQueryBuilder, In } from 'typeorm';
+import { operators } from '@stackfy/http-query';
 
-import { operators } from '../../../helpers/HttpQueryHelper';
+import { DeepPartial, Repository, SelectQueryBuilder, In } from 'typeorm';
 
 import {
   IBaseRepository,

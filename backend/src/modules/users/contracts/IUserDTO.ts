@@ -1,9 +1,10 @@
+import { IQuery } from '@stackfy/http-query';
+
 import {
   NonFunctionProperties,
   ObjectPropertyNames,
   PrimitiveProperties,
 } from '../../../shared/contracts/IGeneric';
-import { IQuery } from '../../../shared/helpers/HttpQueryHelper';
 
 import { User } from '../app/typeorm/entities/User';
 

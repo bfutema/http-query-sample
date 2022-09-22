@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
+import { HttpQuery, IQuery } from '@stackfy/http-query';
 import debounce from 'lodash/debounce';
 import { v4 } from 'uuid';
 
-import { HttpQuery, IParsedQuery } from './helpers/HttpQueryHelper';
 import { UsersService } from './services/apis/UsersService';
 
 type IUser = {
@@ -17,7 +17,7 @@ type IUser = {
 const App: React.FC = () => {
   const [users, setUsers] = useState<IUser[]>([]);
 
-  const [query, setQuery] = useState<IParsedQuery>(
+  const [query, setQuery] = useState<IQuery>(
     HttpQuery.getInitialQuery({
       limit: 100,
       sort: [{ order: 'ASC', property: 'name' }],
@@ -33,7 +33,7 @@ const App: React.FC = () => {
 
       setUsers(data);
 
-      const parsedQuery = HttpQuery.getParsedQueryString(query);
+      const parsedQuery = HttpQuery.getQueryString(query);
 
       window.history.pushState('', '', `/users${parsedQuery}`);
     }

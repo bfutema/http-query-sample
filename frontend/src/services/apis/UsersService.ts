@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
+import { HttpQuery, IQuery } from '@stackfy/http-query';
 
-import { HttpQuery, IParsedQuery } from '../../helpers/HttpQueryHelper';
 import { api } from '../api';
 
 type IUser = {
@@ -12,7 +12,7 @@ type IUser = {
 };
 
 interface IListProps {
-  query?: IParsedQuery;
+  query: IQuery;
   relations?: string[];
 }
 
@@ -25,7 +25,7 @@ interface IListResponse {
 
 class UsersService {
   public async list(params: IListProps): Promise<IListResponse> {
-    const parsedQuery = HttpQuery.getParsedQueryString(params.query);
+    const parsedQuery = HttpQuery.getQueryString(params.query);
 
     const options = params.relations
       ? { headers: { relations: params.relations.join(',') } }
